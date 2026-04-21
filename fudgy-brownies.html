@@ -41,6 +41,7 @@
         <span class="rating-stars">⭐ 5.0</span><span style="color:var(--mid)">(632 reviews)</span>
       </div>
       <div class="action-bar">
+        <a href="#recipe" class="jump-to-recipe">⬇ Jump to Recipe</a>
         <button class="btn-ghost" onclick="window.print()">🖨️ Print Recipe</button>
         <button class="btn-ghost" onclick="navigator.clipboard.writeText(location.href);this.textContent='✅ Copied!'">🔗 Share</button>
       </div>
@@ -67,6 +68,55 @@
           <li>Stay fudgy for up to 5 days at room temperature (if they last that long)</li>
           <li>Can be made gluten-free by swapping in 1:1 GF flour</li>
         </ul>
+      </section>
+
+      <!-- Recipe Card -->
+      <section class="recipe-card-section" id="recipe">
+        <div class="recipe-card">
+          <div class="recipe-card-header">
+            <h2 class="recipe-card-title">Best Fudgy Brownie Recipe From Scratch</h2>
+            <div class="recipe-card-btns">
+              <button class="btn-print-recipe" onclick="window.print()">🖨️ Print Recipe</button>
+              <button class="btn-share-recipe" onclick="navigator.clipboard.writeText(location.href+'#recipe');this.textContent='✅ Copied!'">🔗 Share</button>
+            </div>
+          </div>
+          <img class="recipe-card-img" src="https://images.unsplash.com/photo-1515037893149-de7f840978e2?w=900&q=80" alt="Fudgy double chocolate brownies"/>
+          <div class="recipe-card-stats">
+            <div class="rstat"><div class="rstat-val">15 min</div><div class="rstat-lbl">Prep</div></div>
+            <div class="rstat"><div class="rstat-val">22 min</div><div class="rstat-lbl">Cook</div></div>
+            <div class="rstat"><div class="rstat-val">37 min</div><div class="rstat-lbl">Total</div></div>
+            <div class="rstat"><div class="rstat-val">16</div><div class="rstat-lbl">Pieces</div></div>
+            <div class="rstat"><div class="rstat-val">⭐ 5.0</div><div class="rstat-lbl">Rating</div></div>
+            <div class="rstat"><div class="rstat-val">260</div><div class="rstat-lbl">Calories</div></div>
+          </div>
+          <div class="recipe-card-cols">
+            <div class="rc-ingredients">
+              <h3>Ingredients</h3>
+              <ul>
+                <li>115g unsalted butter</li>
+                <li>200g dark chocolate (60–70%)</li>
+                <li>200g granulated sugar</li>
+                <li>2 large eggs + 1 egg yolk</li>
+                <li>1 tsp vanilla extract</li>
+                <li>80g all-purpose flour</li>
+                <li>30g unsweetened cocoa powder</li>
+                <li>½ tsp salt</li>
+                <li>100g chocolate chips</li>
+              </ul>
+            </div>
+            <div class="rc-instructions">
+              <h3>Instructions</h3>
+              <ol>
+                <li><span class="step-bubble">1</span><span><strong>Prep pan</strong> Preheat oven to 325°F (165°C). Line an 8x8 pan with parchment paper.</span></li>
+                <li><span class="step-bubble">2</span><span><strong>Melt chocolate &amp; butter</strong> Melt together over a bain-marie until smooth and glossy; cool slightly.</span></li>
+                <li><span class="step-bubble">3</span><span><strong>Add sugar &amp; eggs</strong> Whisk in sugar; add eggs and yolk one at a time, whisking vigorously. Add vanilla.</span></li>
+                <li><span class="step-bubble">4</span><span><strong>Fold in dry ingredients</strong> Sift flour, cocoa, and salt into bowl; fold until just combined; fold in chocolate chips.</span></li>
+                <li><span class="step-bubble">5</span><span><strong>Bake</strong> Bake 20–22 min until edges are set but center still jiggles slightly.</span></li>
+                <li><span class="step-bubble">6</span><span><strong>Cool completely</strong> Cool at least 1 hour before cutting with a clean sharp knife.</span></li>
+              </ol>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section>

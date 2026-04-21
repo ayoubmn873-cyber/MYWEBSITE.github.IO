@@ -41,6 +41,7 @@
         <span class="rating-stars">⭐ 4.8</span><span style="color:var(--mid)">(278 reviews)</span>
       </div>
       <div class="action-bar">
+        <a href="#recipe" class="jump-to-recipe">⬇ Jump to Recipe</a>
         <button class="btn-ghost" onclick="window.print()">🖨️ Print Recipe</button>
         <button class="btn-ghost" onclick="navigator.clipboard.writeText(location.href);this.textContent='✅ Copied!'">🔗 Share</button>
       </div>
@@ -67,6 +68,57 @@
           <li>The herb butter can be made ahead and stored in the fridge for a week</li>
           <li>Works with any salmon variety — Atlantic, sockeye, king, or coho</li>
         </ul>
+      </section>
+
+      <!-- Recipe Card -->
+      <section class="recipe-card-section" id="recipe">
+        <div class="recipe-card">
+          <div class="recipe-card-header">
+            <h2 class="recipe-card-title">Easy Baked Salmon with Lemon Herb Butter</h2>
+            <div class="recipe-card-btns">
+              <button class="btn-print-recipe" onclick="window.print()">🖨️ Print Recipe</button>
+              <button class="btn-share-recipe" onclick="navigator.clipboard.writeText(location.href+'#recipe');this.textContent='✅ Copied!'">🔗 Share</button>
+            </div>
+          </div>
+          <img class="recipe-card-img" src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=900&q=80" alt="Baked lemon herb salmon"/>
+          <div class="recipe-card-stats">
+            <div class="rstat"><div class="rstat-val">10 min</div><div class="rstat-lbl">Prep</div></div>
+            <div class="rstat"><div class="rstat-val">20 min</div><div class="rstat-lbl">Cook</div></div>
+            <div class="rstat"><div class="rstat-val">30 min</div><div class="rstat-lbl">Total</div></div>
+            <div class="rstat"><div class="rstat-val">2</div><div class="rstat-lbl">Servings</div></div>
+            <div class="rstat"><div class="rstat-val">⭐ 4.8</div><div class="rstat-lbl">Rating</div></div>
+            <div class="rstat"><div class="rstat-val">420</div><div class="rstat-lbl">Calories</div></div>
+          </div>
+          <div class="recipe-card-cols">
+            <div class="rc-ingredients">
+              <h3>Ingredients</h3>
+              <ul>
+                <li>2 salmon fillets (170g / 6oz each)</li>
+                <li>3 tbsp unsalted butter, softened</li>
+                <li>3 garlic cloves, minced</li>
+                <li>2 tbsp fresh parsley, chopped</li>
+                <li>1 tbsp fresh dill, chopped</li>
+                <li>1 lemon (zest + juice)</li>
+                <li>1 tsp Dijon mustard</li>
+                <li>Salt &amp; black pepper</li>
+                <li>1 bunch asparagus</li>
+                <li>1 tbsp olive oil</li>
+                <li>Lemon wedges to serve</li>
+              </ul>
+            </div>
+            <div class="rc-instructions">
+              <h3>Instructions</h3>
+              <ol>
+                <li><span class="step-bubble">1</span><span><strong>Preheat oven</strong> Heat to 400°F (200°C). Line a baking sheet with foil.</span></li>
+                <li><span class="step-bubble">2</span><span><strong>Make herb butter</strong> Mix softened butter with garlic, parsley, dill, lemon zest, Dijon, salt, and pepper.</span></li>
+                <li><span class="step-bubble">3</span><span><strong>Prep asparagus</strong> Snap off woody ends, toss with olive oil, salt, and pepper; spread on one side of pan.</span></li>
+                <li><span class="step-bubble">4</span><span><strong>Top the salmon</strong> Pat salmon dry, season with salt and pepper, place skin-side down, spread herb butter on top.</span></li>
+                <li><span class="step-bubble">5</span><span><strong>Bake</strong> Bake 12–15 min until salmon flakes easily. Broil 2 min for a golden top.</span></li>
+                <li><span class="step-bubble">6</span><span><strong>Finish &amp; serve</strong> Squeeze fresh lemon over everything and serve immediately.</span></li>
+              </ol>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section>

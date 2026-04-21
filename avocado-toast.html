@@ -47,6 +47,7 @@
         <span class="rating-stars">⭐ 4.8</span><span style="color:var(--mid)">(245 reviews)</span>
       </div>
       <div class="action-bar">
+        <a href="#recipe" class="jump-to-recipe">⬇ Jump to Recipe</a>
         <button class="btn-ghost" onclick="window.print()">🖨️ Print Recipe</button>
         <button class="btn-ghost" onclick="navigator.clipboard.writeText(location.href);this.textContent='✅ Copied!'">🔗 Share</button>
       </div>
@@ -76,6 +77,55 @@
           <li>Endlessly customizable: add feta, smoked salmon, everything seasoning, or chili oil</li>
           <li>Uses simple pantry ingredients you already have at home</li>
         </ul>
+      </section>
+
+      <!-- Recipe Card -->
+      <section class="recipe-card-section" id="recipe">
+        <div class="recipe-card">
+          <div class="recipe-card-header">
+            <h2 class="recipe-card-title">Avocado Toast with Poached Eggs</h2>
+            <div class="recipe-card-btns">
+              <button class="btn-print-recipe" onclick="window.print()">🖨️ Print Recipe</button>
+              <button class="btn-share-recipe" onclick="navigator.clipboard.writeText(location.href+'#recipe');this.textContent='✅ Copied!'">🔗 Share</button>
+            </div>
+          </div>
+          <img class="recipe-card-img" src="https://images.unsplash.com/photo-1525351484163-7529414344d8?w=900&q=80" alt="Avocado toast with poached eggs"/>
+          <div class="recipe-card-stats">
+            <div class="rstat"><div class="rstat-val">5 min</div><div class="rstat-lbl">Prep</div></div>
+            <div class="rstat"><div class="rstat-val">10 min</div><div class="rstat-lbl">Cook</div></div>
+            <div class="rstat"><div class="rstat-val">15 min</div><div class="rstat-lbl">Total</div></div>
+            <div class="rstat"><div class="rstat-val">2</div><div class="rstat-lbl">Servings</div></div>
+            <div class="rstat"><div class="rstat-val">⭐ 4.8</div><div class="rstat-lbl">Rating</div></div>
+            <div class="rstat"><div class="rstat-val">380</div><div class="rstat-lbl">Calories</div></div>
+          </div>
+          <div class="recipe-card-cols">
+            <div class="rc-ingredients">
+              <h3>Ingredients</h3>
+              <ul>
+                <li>2 slices sourdough bread</li>
+                <li>2 ripe avocados</li>
+                <li>2 large eggs</li>
+                <li>½ lemon, juiced</li>
+                <li>2 tbsp white vinegar</li>
+                <li>¼ tsp red pepper flakes</li>
+                <li>Salt &amp; black pepper</li>
+                <li>Handful of microgreens</li>
+                <li>1 tbsp extra-virgin olive oil</li>
+                <li>Everything bagel seasoning</li>
+              </ul>
+            </div>
+            <div class="rc-instructions">
+              <h3>Instructions</h3>
+              <ol>
+                <li><span class="step-bubble">1</span><span><strong>Prep poaching water</strong> Fill a saucepan with 3 inches of water, bring to a bare simmer, and add the white vinegar.</span></li>
+                <li><span class="step-bubble">2</span><span><strong>Make avocado spread</strong> Mash avocados with lemon juice, salt, and black pepper to your preferred texture.</span></li>
+                <li><span class="step-bubble">3</span><span><strong>Toast the bread</strong> Toast sourdough until deeply golden and completely crispy.</span></li>
+                <li><span class="step-bubble">4</span><span><strong>Poach the eggs</strong> Swirl the water, slide in one egg, and cook 3 min for a runny yolk. Repeat.</span></li>
+                <li><span class="step-bubble">5</span><span><strong>Assemble &amp; serve</strong> Spread avocado on toast, top with a poached egg, scatter flakes, microgreens, and drizzle with olive oil.</span></li>
+              </ol>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- Ingredients -->

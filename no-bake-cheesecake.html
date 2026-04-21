@@ -41,6 +41,7 @@
         <span class="rating-stars">⭐ 4.8</span><span style="color:var(--mid)">(194 reviews)</span>
       </div>
       <div class="action-bar">
+        <a href="#recipe" class="jump-to-recipe">⬇ Jump to Recipe</a>
         <button class="btn-ghost" onclick="window.print()">🖨️ Print Recipe</button>
         <button class="btn-ghost" onclick="navigator.clipboard.writeText(location.href);this.textContent='✅ Copied!'">🔗 Share</button>
       </div>
@@ -67,6 +68,58 @@
           <li>Individual portions — no cutting, no serving mess, perfect for dinner parties</li>
           <li>Swap the topping easily: use blueberries, raspberries, mango, or lemon curd</li>
         </ul>
+      </section>
+
+      <!-- Recipe Card -->
+      <section class="recipe-card-section" id="recipe">
+        <div class="recipe-card">
+          <div class="recipe-card-header">
+            <h2 class="recipe-card-title">Easy No-Bake Cheesecake Jars</h2>
+            <div class="recipe-card-btns">
+              <button class="btn-print-recipe" onclick="window.print()">🖨️ Print Recipe</button>
+              <button class="btn-share-recipe" onclick="navigator.clipboard.writeText(location.href+'#recipe');this.textContent='✅ Copied!'">🔗 Share</button>
+            </div>
+          </div>
+          <img class="recipe-card-img" src="https://images.unsplash.com/photo-1488477181228-c2b89f848f28?w=900&q=80" alt="No-bake cheesecake jars"/>
+          <div class="recipe-card-stats">
+            <div class="rstat"><div class="rstat-val">20 min</div><div class="rstat-lbl">Prep</div></div>
+            <div class="rstat"><div class="rstat-val">2 hr</div><div class="rstat-lbl">Chill</div></div>
+            <div class="rstat"><div class="rstat-val">2h 20m</div><div class="rstat-lbl">Total</div></div>
+            <div class="rstat"><div class="rstat-val">4 jars</div><div class="rstat-lbl">Makes</div></div>
+            <div class="rstat"><div class="rstat-val">⭐ 4.8</div><div class="rstat-lbl">Rating</div></div>
+            <div class="rstat"><div class="rstat-val">410</div><div class="rstat-lbl">Calories</div></div>
+          </div>
+          <div class="recipe-card-cols">
+            <div class="rc-ingredients">
+              <h3>Ingredients</h3>
+              <ul>
+                <li>225g cream cheese, room temperature</li>
+                <li>240ml heavy whipping cream</li>
+                <li>80g powdered sugar</li>
+                <li>1 tsp vanilla extract</li>
+                <li>1 tbsp fresh lemon juice</li>
+                <li>150g graham crackers, crushed</li>
+                <li>60g unsalted butter, melted</li>
+                <li>2 tbsp sugar (for crust)</li>
+                <li>250g fresh strawberries</li>
+                <li>2 tbsp sugar (for topping)</li>
+                <li>1 tsp cornstarch</li>
+                <li>4 glass jars (250ml each)</li>
+              </ul>
+            </div>
+            <div class="rc-instructions">
+              <h3>Instructions</h3>
+              <ol>
+                <li><span class="step-bubble">1</span><span><strong>Make the crust</strong> Mix crushed graham crackers, melted butter, and sugar; press into jar bottoms. Refrigerate.</span></li>
+                <li><span class="step-bubble">2</span><span><strong>Beat cream cheese</strong> Beat room-temp cream cheese until smooth; mix in powdered sugar, vanilla, and lemon juice.</span></li>
+                <li><span class="step-bubble">3</span><span><strong>Whip the cream</strong> Whip heavy cream to stiff peaks in a cold bowl.</span></li>
+                <li><span class="step-bubble">4</span><span><strong>Fold &amp; fill</strong> Fold whipped cream into cream cheese mixture; spoon over crusts. Chill 2+ hours.</span></li>
+                <li><span class="step-bubble">5</span><span><strong>Make strawberry topping</strong> Cook diced strawberries with sugar and cornstarch until thick and glossy; cool completely.</span></li>
+                <li><span class="step-bubble">6</span><span><strong>Top &amp; serve</strong> Spoon cooled compote over each jar just before serving.</span></li>
+              </ol>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section>

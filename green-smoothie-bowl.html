@@ -40,6 +40,7 @@
         <span class="rating-stars">⭐ 4.6</span><span style="color:var(--mid)">(143 reviews)</span>
       </div>
       <div class="action-bar">
+        <a href="#recipe" class="jump-to-recipe">⬇ Jump to Recipe</a>
         <button class="btn-ghost" onclick="window.print()">🖨️ Print Recipe</button>
         <button class="btn-ghost" onclick="navigator.clipboard.writeText(location.href);this.textContent='✅ Copied!'">🔗 Share</button>
       </div>
@@ -66,6 +67,57 @@
           <li>Naturally vegan, dairy-free, and gluten-free with no substitutions</li>
           <li>Instagram-worthy presentation that's genuinely easy to achieve</li>
         </ul>
+      </section>
+
+      <!-- Recipe Card -->
+      <section class="recipe-card-section" id="recipe">
+        <div class="recipe-card">
+          <div class="recipe-card-header">
+            <h2 class="recipe-card-title">Green Detox Smoothie Bowl</h2>
+            <div class="recipe-card-btns">
+              <button class="btn-print-recipe" onclick="window.print()">🖨️ Print Recipe</button>
+              <button class="btn-share-recipe" onclick="navigator.clipboard.writeText(location.href+'#recipe');this.textContent='✅ Copied!'">🔗 Share</button>
+            </div>
+          </div>
+          <img class="recipe-card-img" src="https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?w=900&q=80" alt="Green detox smoothie bowl"/>
+          <div class="recipe-card-stats">
+            <div class="rstat"><div class="rstat-val">10 min</div><div class="rstat-lbl">Total</div></div>
+            <div class="rstat"><div class="rstat-val">1</div><div class="rstat-lbl">Serving</div></div>
+            <div class="rstat"><div class="rstat-val">Easy</div><div class="rstat-lbl">Level</div></div>
+            <div class="rstat"><div class="rstat-val">⭐ 4.6</div><div class="rstat-lbl">Rating</div></div>
+            <div class="rstat"><div class="rstat-val">280</div><div class="rstat-lbl">Calories</div></div>
+            <div class="rstat"><div class="rstat-val">Vegan</div><div class="rstat-lbl">Diet</div></div>
+          </div>
+          <div class="recipe-card-cols">
+            <div class="rc-ingredients">
+              <h3>Ingredients</h3>
+              <ul>
+                <li>2 frozen bananas</li>
+                <li>2 cups baby spinach</li>
+                <li>1 kiwi, peeled</li>
+                <li>120ml coconut or almond milk</li>
+                <li>1 tsp spirulina (optional)</li>
+                <li>1 tsp honey</li>
+                <li>3 tbsp granola</li>
+                <li>1 tbsp chia seeds</li>
+                <li>1 tbsp coconut flakes</li>
+                <li>Sliced kiwi &amp; banana</li>
+                <li>Fresh strawberries</li>
+                <li>Fresh mint to garnish</li>
+              </ul>
+            </div>
+            <div class="rc-instructions">
+              <h3>Instructions</h3>
+              <ol>
+                <li><span class="step-bubble">1</span><span><strong>Freeze bananas</strong> Peel and slice bananas; freeze in a bag for at least 4 hours or overnight.</span></li>
+                <li><span class="step-bubble">2</span><span><strong>Blend the base</strong> Blend frozen bananas, spinach, kiwi, coconut milk, and honey until very thick and smooth.</span></li>
+                <li><span class="step-bubble">3</span><span><strong>Pour into bowl</strong> Use a wide shallow bowl; smooth the surface flat with the back of a spoon.</span></li>
+                <li><span class="step-bubble">4</span><span><strong>Arrange toppings</strong> Create distinct sections of granola, sliced fruit, chia seeds, and coconut flakes.</span></li>
+                <li><span class="step-bubble">5</span><span><strong>Serve immediately</strong> Garnish with fresh mint and eat right away before it melts.</span></li>
+              </ol>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section>

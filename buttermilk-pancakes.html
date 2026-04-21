@@ -41,6 +41,7 @@
         <span class="rating-stars">⭐ 4.9</span><span style="color:var(--mid)">(389 reviews)</span>
       </div>
       <div class="action-bar">
+        <a href="#recipe" class="jump-to-recipe">⬇ Jump to Recipe</a>
         <button class="btn-ghost" onclick="window.print()">🖨️ Print Recipe</button>
         <button class="btn-ghost" onclick="navigator.clipboard.writeText(location.href);this.textContent='✅ Copied!'">🔗 Share</button>
       </div>
@@ -67,6 +68,58 @@
           <li>Freezer-friendly: make a big batch and reheat all week</li>
           <li>Endlessly customizable — add blueberries, chocolate chips, or banana slices</li>
         </ul>
+      </section>
+
+      <!-- Recipe Card -->
+      <section class="recipe-card-section" id="recipe">
+        <div class="recipe-card">
+          <div class="recipe-card-header">
+            <h2 class="recipe-card-title">Fluffy Buttermilk Pancakes</h2>
+            <div class="recipe-card-btns">
+              <button class="btn-print-recipe" onclick="window.print()">🖨️ Print Recipe</button>
+              <button class="btn-share-recipe" onclick="navigator.clipboard.writeText(location.href+'#recipe');this.textContent='✅ Copied!'">🔗 Share</button>
+            </div>
+          </div>
+          <img class="recipe-card-img" src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=900&q=80" alt="Fluffy buttermilk pancakes"/>
+          <div class="recipe-card-stats">
+            <div class="rstat"><div class="rstat-val">5 min</div><div class="rstat-lbl">Prep</div></div>
+            <div class="rstat"><div class="rstat-val">15 min</div><div class="rstat-lbl">Cook</div></div>
+            <div class="rstat"><div class="rstat-val">20 min</div><div class="rstat-lbl">Total</div></div>
+            <div class="rstat"><div class="rstat-val">4</div><div class="rstat-lbl">Servings</div></div>
+            <div class="rstat"><div class="rstat-val">⭐ 4.9</div><div class="rstat-lbl">Rating</div></div>
+            <div class="rstat"><div class="rstat-val">320</div><div class="rstat-lbl">Calories</div></div>
+          </div>
+          <div class="recipe-card-cols">
+            <div class="rc-ingredients">
+              <h3>Ingredients</h3>
+              <ul>
+                <li>2 cups all-purpose flour</li>
+                <li>2 cups buttermilk</li>
+                <li>2 large eggs</li>
+                <li>3 tbsp melted butter</li>
+                <li>2 tbsp granulated sugar</li>
+                <li>2 tsp baking powder</li>
+                <li>1 tsp baking soda</li>
+                <li>½ tsp salt</li>
+                <li>1 tsp vanilla extract</li>
+                <li>Butter for the pan</li>
+                <li>Maple syrup to serve</li>
+                <li>Fresh berries to serve</li>
+              </ul>
+            </div>
+            <div class="rc-instructions">
+              <h3>Instructions</h3>
+              <ol>
+                <li><span class="step-bubble">1</span><span><strong>Mix dry ingredients</strong> Whisk flour, sugar, baking powder, baking soda, and salt in a large bowl. Make a well in the center.</span></li>
+                <li><span class="step-bubble">2</span><span><strong>Mix wet ingredients</strong> Whisk buttermilk, eggs, melted butter, and vanilla in a separate bowl.</span></li>
+                <li><span class="step-bubble">3</span><span><strong>Combine — don't overmix</strong> Fold wet into dry until just combined. Batter should be lumpy.</span></li>
+                <li><span class="step-bubble">4</span><span><strong>Rest 5 minutes</strong> Let batter sit while you preheat a buttered skillet over medium heat.</span></li>
+                <li><span class="step-bubble">5</span><span><strong>Cook</strong> Pour ¼ cup per pancake. Cook until bubbles form and edges look set, ~2–3 min, then flip once.</span></li>
+                <li><span class="step-bubble">6</span><span><strong>Serve</strong> Stack with maple syrup, a pat of butter, and fresh berries.</span></li>
+              </ol>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section>

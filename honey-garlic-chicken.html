@@ -41,6 +41,7 @@
         <span class="rating-stars">⭐ 4.9</span><span style="color:var(--mid)">(743 reviews)</span>
       </div>
       <div class="action-bar">
+        <a href="#recipe" class="jump-to-recipe">⬇ Jump to Recipe</a>
         <button class="btn-ghost" onclick="window.print()">🖨️ Print Recipe</button>
         <button class="btn-ghost" onclick="navigator.clipboard.writeText(location.href);this.textContent='✅ Copied!'">🔗 Share</button>
       </div>
@@ -67,6 +68,58 @@
           <li>Sticky honey garlic sauce that doubles as a glaze for the rice or veggies underneath</li>
           <li>Budget-friendly — chicken thighs cost a fraction of breasts and taste better</li>
         </ul>
+      </section>
+
+      <!-- Recipe Card -->
+      <section class="recipe-card-section" id="recipe">
+        <div class="recipe-card">
+          <div class="recipe-card-header">
+            <h2 class="recipe-card-title">Crispy Honey Garlic Chicken</h2>
+            <div class="recipe-card-btns">
+              <button class="btn-print-recipe" onclick="window.print()">🖨️ Print Recipe</button>
+              <button class="btn-share-recipe" onclick="navigator.clipboard.writeText(location.href+'#recipe');this.textContent='✅ Copied!'">🔗 Share</button>
+            </div>
+          </div>
+          <img class="recipe-card-img" src="https://images.unsplash.com/photo-1598103442097-8b74394b95c3?w=900&q=80" alt="Crispy honey garlic chicken"/>
+          <div class="recipe-card-stats">
+            <div class="rstat"><div class="rstat-val">10 min</div><div class="rstat-lbl">Prep</div></div>
+            <div class="rstat"><div class="rstat-val">20 min</div><div class="rstat-lbl">Cook</div></div>
+            <div class="rstat"><div class="rstat-val">30 min</div><div class="rstat-lbl">Total</div></div>
+            <div class="rstat"><div class="rstat-val">4</div><div class="rstat-lbl">Servings</div></div>
+            <div class="rstat"><div class="rstat-val">⭐ 4.9</div><div class="rstat-lbl">Rating</div></div>
+            <div class="rstat"><div class="rstat-val">480</div><div class="rstat-lbl">Calories</div></div>
+          </div>
+          <div class="recipe-card-cols">
+            <div class="rc-ingredients">
+              <h3>Ingredients</h3>
+              <ul>
+                <li>8 chicken thighs, bone-in skin-on</li>
+                <li>1 tsp salt</li>
+                <li>1 tsp black pepper</li>
+                <li>1 tsp garlic powder</li>
+                <li>1 tsp smoked paprika</li>
+                <li>2 tbsp olive oil</li>
+                <li>6 cloves garlic, minced</li>
+                <li>60ml honey</li>
+                <li>3 tbsp soy sauce</li>
+                <li>1 tbsp apple cider vinegar</li>
+                <li>1 tsp cornstarch + 1 tbsp water</li>
+              </ul>
+            </div>
+            <div class="rc-instructions">
+              <h3>Instructions</h3>
+              <ol>
+                <li><span class="step-bubble">1</span><span><strong>Season chicken</strong> Pat completely dry, season both sides with salt, pepper, garlic powder, and paprika.</span></li>
+                <li><span class="step-bubble">2</span><span><strong>Sear skin-side down</strong> Cook in hot oiled skillet, skin-side down, for 8 min without moving.</span></li>
+                <li><span class="step-bubble">3</span><span><strong>Flip &amp; sear</strong> Sear other side 3 more min; transfer chicken to a plate.</span></li>
+                <li><span class="step-bubble">4</span><span><strong>Make honey garlic sauce</strong> Sauté garlic 30 sec, add honey, soy sauce, and vinegar; scrape up brown bits.</span></li>
+                <li><span class="step-bubble">5</span><span><strong>Thicken sauce</strong> Add cornstarch slurry; stir until sauce becomes a glossy glaze.</span></li>
+                <li><span class="step-bubble">6</span><span><strong>Finish in oven</strong> Return chicken to pan, coat in sauce; bake at 400°F for 10 min.</span></li>
+                <li><span class="step-bubble">7</span><span><strong>Serve</strong> Garnish with green onions and sesame seeds; serve over steamed rice.</span></li>
+              </ol>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section>

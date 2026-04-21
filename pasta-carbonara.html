@@ -41,6 +41,7 @@
         <span class="rating-stars">⭐ 4.9</span><span style="color:var(--mid)">(511 reviews)</span>
       </div>
       <div class="action-bar">
+        <a href="#recipe" class="jump-to-recipe">⬇ Jump to Recipe</a>
         <button class="btn-ghost" onclick="window.print()">🖨️ Print Recipe</button>
         <button class="btn-ghost" onclick="navigator.clipboard.writeText(location.href);this.textContent='✅ Copied!'">🔗 Share</button>
       </div>
@@ -67,6 +68,54 @@
           <li>25 minutes start to finish, perfect for weeknight dinners</li>
           <li>Once you master the emulsification technique, you'll use it forever</li>
         </ul>
+      </section>
+
+      <!-- Recipe Card -->
+      <section class="recipe-card-section" id="recipe">
+        <div class="recipe-card">
+          <div class="recipe-card-header">
+            <h2 class="recipe-card-title">Authentic Pasta Carbonara (No Cream!)</h2>
+            <div class="recipe-card-btns">
+              <button class="btn-print-recipe" onclick="window.print()">🖨️ Print Recipe</button>
+              <button class="btn-share-recipe" onclick="navigator.clipboard.writeText(location.href+'#recipe');this.textContent='✅ Copied!'">🔗 Share</button>
+            </div>
+          </div>
+          <img class="recipe-card-img" src="https://images.unsplash.com/photo-1612874742237-6526221588e3?w=900&q=80" alt="Authentic pasta carbonara"/>
+          <div class="recipe-card-stats">
+            <div class="rstat"><div class="rstat-val">10 min</div><div class="rstat-lbl">Prep</div></div>
+            <div class="rstat"><div class="rstat-val">15 min</div><div class="rstat-lbl">Cook</div></div>
+            <div class="rstat"><div class="rstat-val">25 min</div><div class="rstat-lbl">Total</div></div>
+            <div class="rstat"><div class="rstat-val">4</div><div class="rstat-lbl">Servings</div></div>
+            <div class="rstat"><div class="rstat-val">⭐ 4.9</div><div class="rstat-lbl">Rating</div></div>
+            <div class="rstat"><div class="rstat-val">580</div><div class="rstat-lbl">Calories</div></div>
+          </div>
+          <div class="recipe-card-cols">
+            <div class="rc-ingredients">
+              <h3>Ingredients</h3>
+              <ul>
+                <li>400g spaghetti</li>
+                <li>200g guanciale or pancetta</li>
+                <li>4 large egg yolks</li>
+                <li>1 whole egg</li>
+                <li>80g Pecorino Romano, grated</li>
+                <li>40g Parmesan, grated</li>
+                <li>2 tsp black pepper, freshly cracked</li>
+                <li>Salt (for pasta water only)</li>
+              </ul>
+            </div>
+            <div class="rc-instructions">
+              <h3>Instructions</h3>
+              <ol>
+                <li><span class="step-bubble">1</span><span><strong>Cook pasta</strong> Boil spaghetti al dente in well-salted water. Reserve 1 cup pasta water before draining.</span></li>
+                <li><span class="step-bubble">2</span><span><strong>Render guanciale</strong> Cook guanciale from cold in a skillet until crispy, 8–10 min. Remove pan from heat.</span></li>
+                <li><span class="step-bubble">3</span><span><strong>Make egg mixture</strong> Whisk egg yolks, whole egg, most of the cheese, and black pepper in a bowl.</span></li>
+                <li><span class="step-bubble">4</span><span><strong>Combine off-heat</strong> Add drained pasta to pan (off heat); toss in fat with a splash of pasta water.</span></li>
+                <li><span class="step-bubble">5</span><span><strong>Emulsify the sauce</strong> Pour egg mixture over pasta, tossing constantly; add pasta water gradually until silky.</span></li>
+                <li><span class="step-bubble">6</span><span><strong>Serve immediately</strong> Plate, top with remaining cheese and a heavy crack of black pepper.</span></li>
+              </ol>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section>

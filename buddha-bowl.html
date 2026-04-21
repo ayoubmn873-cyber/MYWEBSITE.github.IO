@@ -41,6 +41,7 @@
         <span class="rating-stars">⭐ 4.7</span><span style="color:var(--mid)">(167 reviews)</span>
       </div>
       <div class="action-bar">
+        <a href="#recipe" class="jump-to-recipe">⬇ Jump to Recipe</a>
         <button class="btn-ghost" onclick="window.print()">🖨️ Print Recipe</button>
         <button class="btn-ghost" onclick="navigator.clipboard.writeText(location.href);this.textContent='✅ Copied!'">🔗 Share</button>
       </div>
@@ -67,6 +68,60 @@
           <li>Naturally vegan and gluten-free with no substitutions needed</li>
           <li>The tahini dressing is versatile — use it on salads, wraps, or as a dip</li>
         </ul>
+      </section>
+
+      <!-- Recipe Card -->
+      <section class="recipe-card-section" id="recipe">
+        <div class="recipe-card">
+          <div class="recipe-card-header">
+            <h2 class="recipe-card-title">Rainbow Buddha Bowl with Creamy Tahini Dressing</h2>
+            <div class="recipe-card-btns">
+              <button class="btn-print-recipe" onclick="window.print()">🖨️ Print Recipe</button>
+              <button class="btn-share-recipe" onclick="navigator.clipboard.writeText(location.href+'#recipe');this.textContent='✅ Copied!'">🔗 Share</button>
+            </div>
+          </div>
+          <img class="recipe-card-img" src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=900&q=80" alt="Rainbow buddha bowl"/>
+          <div class="recipe-card-stats">
+            <div class="rstat"><div class="rstat-val">10 min</div><div class="rstat-lbl">Prep</div></div>
+            <div class="rstat"><div class="rstat-val">20 min</div><div class="rstat-lbl">Cook</div></div>
+            <div class="rstat"><div class="rstat-val">30 min</div><div class="rstat-lbl">Total</div></div>
+            <div class="rstat"><div class="rstat-val">2</div><div class="rstat-lbl">Servings</div></div>
+            <div class="rstat"><div class="rstat-val">⭐ 4.7</div><div class="rstat-lbl">Rating</div></div>
+            <div class="rstat"><div class="rstat-val">380</div><div class="rstat-lbl">Calories</div></div>
+          </div>
+          <div class="recipe-card-cols">
+            <div class="rc-ingredients">
+              <h3>Ingredients</h3>
+              <ul>
+                <li>180g dry quinoa</li>
+                <li>1 can chickpeas (400g), drained</li>
+                <li>1 tbsp olive oil</li>
+                <li>1 tsp cumin + 1 tsp smoked paprika</li>
+                <li>1 cup shredded purple cabbage</li>
+                <li>2 medium carrots, grated</li>
+                <li>1 avocado, sliced</li>
+                <li>1 cup cherry tomatoes, halved</li>
+                <li>1 cucumber, sliced</li>
+                <li>2 handfuls baby spinach or kale</li>
+                <li>3 tbsp tahini</li>
+                <li>2 tbsp lemon juice</li>
+                <li>1 garlic clove, minced</li>
+                <li>2–4 tbsp water</li>
+                <li>Salt &amp; pepper</li>
+              </ul>
+            </div>
+            <div class="rc-instructions">
+              <h3>Instructions</h3>
+              <ol>
+                <li><span class="step-bubble">1</span><span><strong>Cook quinoa</strong> Rinse, then simmer in salted water 15 min until absorbed. Fluff and set aside.</span></li>
+                <li><span class="step-bubble">2</span><span><strong>Roast chickpeas</strong> Pat dry, toss with oil and spices; roast at 400°F for 20–25 min until crispy.</span></li>
+                <li><span class="step-bubble">3</span><span><strong>Make tahini dressing</strong> Whisk tahini, lemon juice, garlic, and water until smooth and pourable.</span></li>
+                <li><span class="step-bubble">4</span><span><strong>Prep vegetables</strong> Shred cabbage, grate carrots, halve tomatoes, slice cucumber and avocado.</span></li>
+                <li><span class="step-bubble">5</span><span><strong>Assemble bowls</strong> Divide quinoa into bowls; arrange toppings in sections; scatter chickpeas and drizzle with dressing.</span></li>
+              </ol>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section>
