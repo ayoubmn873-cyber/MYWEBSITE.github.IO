@@ -79,45 +79,73 @@
 
     /* ── HEADER ── */
     .site-header {
-      background: var(--white); border-bottom: 1px solid var(--border);
+      background: #fff;
+      border-bottom: 1px solid #f0ede8;
       position: sticky; top: 0; z-index: 200;
-      box-shadow: 0 2px 12px rgba(0,0,0,.05);
+      box-shadow: 0 1px 16px rgba(0,0,0,.06);
     }
     .header-inner {
       display: flex; align-items: center; justify-content: space-between;
-      padding: 16px 0; gap: 20px;
+      height: 68px; gap: 16px;
     }
+    /* Logo */
     .logo {
-      font-size: 1.6rem; font-weight: 900; letter-spacing: -1px;
-      color: var(--orange); flex-shrink: 0;
+      font-size: 1.55rem; font-weight: 900; letter-spacing: -1px;
+      color: var(--orange); flex-shrink: 0; text-decoration: none;
     }
     .logo span { color: var(--dark); }
-    .main-nav ul {
-      display: flex; align-items: center; gap: 6px;
-    }
+    /* Nav */
+    .main-nav ul { display: flex; align-items: center; gap: 2px; }
     .main-nav a {
-      padding: 8px 16px; border-radius: 8px; font-weight: 600;
-      font-size: .9rem; color: var(--mid); transition: all .2s;
+      padding: 7px 14px; border-radius: 8px; font-weight: 600;
+      font-size: .875rem; color: #6b6b80; transition: all .18s;
+      white-space: nowrap;
     }
-    .main-nav a:hover { color: var(--orange); background: #FFF3EE; }
+    .main-nav a:hover { color: var(--orange); background: #fff4ef; }
     .main-nav a.active { color: var(--orange); }
-    .header-cta { display: flex; align-items: center; gap: 12px; }
+    /* Search */
     .search-btn {
-      background: var(--light); border: 1px solid var(--border);
-      border-radius: 8px; padding: 9px 16px; font-size: .85rem;
-      color: var(--mid); cursor: pointer; display: flex; align-items: center; gap: 8px;
-      transition: all .2s;
+      display: flex; align-items: center; gap: 8px;
+      background: #f7f6f3; border: 1px solid #e8e5df;
+      border-radius: 10px; padding: 8px 16px;
+      font-size: .82rem; color: #9e9b94; cursor: pointer;
+      transition: all .18s; white-space: nowrap; min-width: 150px;
     }
-    .search-btn:hover { border-color: var(--orange); color: var(--orange); }
-    @media (max-width: 768px) {
+    .search-btn:hover { border-color: var(--orange); color: var(--orange); background: #fff8f5; }
+    /* CTA area */
+    .header-cta { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .btn-free {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 9px 20px; border-radius: 50px;
+      font-size: .82rem; font-weight: 700;
+      border: 2px solid var(--orange); color: var(--orange);
+      background: transparent; transition: all .2s; white-space: nowrap;
+      text-decoration: none;
+    }
+    .btn-free:hover { background: var(--orange); color: #fff; }
+    .btn-hdr-gold {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 9px 20px; border-radius: 50px;
+      font-size: .82rem; font-weight: 800;
+      background: linear-gradient(135deg, #D4AF37, #f0cb50);
+      color: #1a1500; transition: all .2s; white-space: nowrap;
+      text-decoration: none;
+      box-shadow: 0 2px 12px rgba(212,175,55,.3);
+    }
+    .btn-hdr-gold:hover { transform: translateY(-1px); box-shadow: 0 4px 20px rgba(212,175,55,.45); }
+    /* Mobile */
+    @media (max-width: 900px) {
       .main-nav { display: none; }
-      .logo { font-size: 1.3rem; }
-      .header-cta { gap: 6px; }
-      .header-cta .btn { padding: 8px 12px; font-size: .75rem; }
-      .header-cta a[href="#gold-ebook"] { padding: 8px 12px; font-size: .75rem; }
+      .search-btn { min-width: unset; }
+      .search-btn span { display: none; }
+      .search-btn::after { content: '🔍'; }
     }
-    @media (max-width: 480px) {
-      .header-cta .btn { display: none; }
+    @media (max-width: 600px) {
+      .header-inner { height: 58px; }
+      .logo { font-size: 1.3rem; }
+      .search-btn { display: none; }
+      .btn-free { display: none; }
+      .btn-hdr-gold { padding: 8px 16px; font-size: .8rem; }
     }
 
     /* ── HERO ── */
@@ -608,25 +636,32 @@
 <!-- ══════════ HEADER ══════════ -->
 <header class="site-header">
   <div class="container">
-    <nav class="header-inner" aria-label="Main navigation">
+    <div class="header-inner">
+
+      <!-- Logo -->
       <a href="/" class="logo">Bin<span>Recipes</span></a>
-      <nav class="main-nav">
+
+      <!-- Nav -->
+      <nav class="main-nav" aria-label="Main navigation">
         <ul>
-          <li><a href="#breakfast" class="active">Breakfast</a></li>
+          <li><a href="#breakfast">Breakfast</a></li>
           <li><a href="#dinner">Dinner</a></li>
           <li><a href="#desserts">Desserts</a></li>
           <li><a href="#healthy">Healthy</a></li>
-          <li><a href="#ebook">📖 Cookbook</a></li>
+          <li><a href="#kitchen-tips">Tips</a></li>
         </ul>
       </nav>
+
+      <!-- Right side -->
       <div class="header-cta">
-        <button class="search-btn" aria-label="Search recipes">
-          🔍 Search recipes…
+        <button class="search-btn" aria-label="Search recipes" onclick="document.getElementById('search-overlay').classList.add('open')">
+          <span>🔍 Search recipes…</span>
         </button>
-        <a href="/cookbook" class="btn btn-primary" style="padding:10px 20px;font-size:.85rem;">🎁 Free Cookbook</a>
-        <a href="#gold-ebook" style="padding:9px 18px;font-size:.82rem;font-weight:800;border-radius:50px;background:linear-gradient(135deg,#D4AF37,#F5D060);color:#0F1428;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:all .25s;">✦ Gold $9.99</a>
+        <a href="/cookbook" class="btn-free">🎁 Free</a>
+        <a href="#gold-ebook" class="btn-hdr-gold">✦ Gold — $9.99</a>
       </div>
-    </nav>
+
+    </div>
   </div>
 </header>
 
@@ -902,7 +937,7 @@
   </section>
 
   <!-- ══════════ KITCHEN TIPS ══════════ -->
-  <section class="tips-section" aria-labelledby="tips-title">
+  <section class="tips-section" id="kitchen-tips" aria-labelledby="tips-title">
     <div class="container">
       <div class="section-head">
         <div>
