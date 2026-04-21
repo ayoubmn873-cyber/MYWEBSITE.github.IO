@@ -112,6 +112,12 @@
     @media (max-width: 768px) {
       .main-nav { display: none; }
       .logo { font-size: 1.3rem; }
+      .header-cta { gap: 6px; }
+      .header-cta .btn { padding: 8px 12px; font-size: .75rem; }
+      .header-cta a[href="#gold-ebook"] { padding: 8px 12px; font-size: .75rem; }
+    }
+    @media (max-width: 480px) {
+      .header-cta .btn { display: none; }
     }
 
     /* ── HERO ── */
@@ -433,7 +439,18 @@
     .gold-inner {
       display: grid; grid-template-columns: 1fr 380px; gap: 60px; align-items: center;
     }
-    @media(max-width:900px){ .gold-inner { grid-template-columns:1fr; } }
+    @media(max-width:900px){
+      .gold-inner { grid-template-columns:1fr; gap:36px; }
+      .gold-section { padding: 56px 0; }
+    }
+    @media(max-width:600px){
+      .gold-section h2 { font-size: 1.8rem; }
+      .gold-price { font-size: 2.2rem; }
+      .btn-gold { width: 100%; justify-content: center; font-size:.9rem; padding:14px 20px; }
+      .gold-secure { flex-wrap: wrap; font-size: .72rem; }
+      .gold-card { padding: 20px 16px; }
+      .gold-features li { font-size: .85rem; }
+    }
     .gold-eyebrow {
       display: inline-flex; align-items: center; gap: 8px;
       background: rgba(212,175,55,.15); border: 1px solid rgba(212,175,55,.35);
