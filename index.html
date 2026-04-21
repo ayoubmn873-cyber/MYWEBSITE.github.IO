@@ -352,6 +352,41 @@
     .newsletter-form input::placeholder { color: #aaa; }
     @media (max-width: 500px) { .newsletter-form { flex-direction: column; } .newsletter-form input, .newsletter-form .btn { width: 100%; justify-content: center; } }
 
+    /* ── EBOOK REDESIGN EXTRAS ── */
+    .ebook-stars { display:flex; align-items:center; gap:8px; margin-bottom:20px; }
+    .ebook-stars .stars { color:#F39C12; font-size:1.1rem; letter-spacing:2px; }
+    .ebook-stars span { font-size:.85rem; color:rgba(255,255,255,.6); }
+    .ebook-chapters {
+      display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:28px;
+    }
+    .ebook-chapter {
+      background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1);
+      border-radius:10px; padding:12px 16px;
+      display:flex; align-items:center; gap:10px;
+    }
+    .ebook-chapter .ch-icon { font-size:1.3rem; flex-shrink:0; }
+    .ebook-chapter .ch-text { font-size:.82rem; color:rgba(255,255,255,.8); font-weight:600; line-height:1.3; }
+    .ebook-testimonials { display:flex; flex-direction:column; gap:10px; margin-bottom:28px; }
+    .ebook-testimonial {
+      background:rgba(255,255,255,.06); border-left:3px solid var(--orange);
+      border-radius:0 10px 10px 0; padding:12px 16px;
+    }
+    .ebook-testimonial p { font-size:.82rem; color:rgba(255,255,255,.75); font-style:italic; margin-bottom:6px; }
+    .ebook-testimonial .reviewer { font-size:.75rem; color:var(--orange2); font-weight:700; }
+    .cover-badge {
+      position:absolute; top:-16px; right:-16px;
+      width:80px; height:80px; border-radius:50%;
+      background:linear-gradient(135deg,#E74C3C,#C0392B);
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      box-shadow:0 8px 24px rgba(231,76,60,.5);
+      border:3px solid rgba(255,255,255,.2);
+      z-index:10;
+    }
+    .cover-badge .badge-price { font-size:.65rem; color:rgba(255,255,255,.7); text-decoration:line-through; }
+    .cover-badge .badge-main { font-size:1rem; font-weight:900; color:#fff; line-height:1; }
+    .cover-badge .badge-sub { font-size:.6rem; color:rgba(255,255,255,.8); text-transform:uppercase; letter-spacing:.5px; }
+    @media(max-width:768px){ .ebook-chapters{grid-template-columns:1fr;} }
+
     /* ── ADS ── */
     .ad-banner {
       background: var(--light); border: 1px dashed var(--border);
@@ -383,6 +418,29 @@
       flex-wrap: wrap; gap: 12px; font-size: .82rem;
     }
     .footer-bottom a { color: var(--orange); }
+
+    /* ── KITCHEN TIPS ── */
+    .tips-section { padding: 70px 0; background: var(--white); }
+    .tips-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 20px; margin-top: 40px;
+    }
+    .tip-card {
+      border: 1.5px solid var(--border); border-radius: 16px;
+      padding: 28px 24px; background: var(--light);
+      transition: border-color .2s, transform .2s, box-shadow .2s;
+    }
+    .tip-card:hover { border-color: var(--orange); transform: translateY(-4px); box-shadow: var(--shadow); }
+    .tip-icon { font-size: 2rem; margin-bottom: 14px; }
+    .tip-card h4 { font-size: 1rem; font-weight: 800; margin-bottom: 8px; color: var(--dark); }
+    .tip-card p { font-size: .87rem; color: var(--mid); line-height: 1.7; }
+    .tip-tag {
+      display: inline-block; font-size: .7rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .5px;
+      padding: 3px 10px; border-radius: 50px;
+      background: #FFF3E0; color: #E65100;
+      margin-bottom: 10px;
+    }
 
     /* ── FILTER ── */
     .category-block[data-cat] { transition: opacity .3s; }
@@ -729,41 +787,186 @@
     </div>
   </section>
 
+  <!-- ══════════ KITCHEN TIPS ══════════ -->
+  <section class="tips-section" aria-labelledby="tips-title">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2 id="tips-title">🍳 <span>Kitchen Tips</span> & Techniques</h2>
+          <p style="color:var(--mid);font-size:.9rem;margin-top:4px;">Time-tested advice from America's home kitchens — passed down for generations.</p>
+        </div>
+      </div>
+      <div class="tips-grid">
+
+        <div class="tip-card">
+          <div class="tip-tag">Cast Iron</div>
+          <div class="tip-icon">🍳</div>
+          <h4>Season Your Cast Iron the Right Way</h4>
+          <p>Coat with a thin layer of flaxseed oil and bake upside-down at 500°F for 1 hour. Repeat 3–4 times for a non-stick surface that lasts decades.</p>
+        </div>
+
+        <div class="tip-card">
+          <div class="tip-tag">Meat</div>
+          <div class="tip-icon">🥩</div>
+          <h4>Always Rest Your Meat</h4>
+          <p>Let steak rest at least 5 minutes after cooking. This lets the juices redistribute — cutting too soon means dry, flavorless meat every time.</p>
+        </div>
+
+        <div class="tip-card">
+          <div class="tip-tag">Baking</div>
+          <div class="tip-icon">🧈</div>
+          <h4>Room-Temperature Butter Matters</h4>
+          <p>Cold butter won't cream properly with sugar. Pull it out 30–60 minutes before baking for cakes and cookies that bake up tall and fluffy.</p>
+        </div>
+
+        <div class="tip-card">
+          <div class="tip-tag">Flavor</div>
+          <div class="tip-icon">🧄</div>
+          <h4>Bloom Your Spices First</h4>
+          <p>Toast dry spices in a dry pan for 30 seconds before adding oil or liquid. Heat releases the essential oils and doubles the depth of flavor.</p>
+        </div>
+
+        <div class="tip-card">
+          <div class="tip-tag">Pasta</div>
+          <div class="tip-icon">🍝</div>
+          <h4>Salt Your Pasta Water Generously</h4>
+          <p>It should taste like the sea — about 1 tablespoon per quart. This is the only chance you have to season pasta from the inside out.</p>
+        </div>
+
+        <div class="tip-card">
+          <div class="tip-tag">Knife Skills</div>
+          <div class="tip-icon">🔪</div>
+          <h4>A Sharp Knife Is a Safe Knife</h4>
+          <p>Dull knives slip and require more force, causing accidents. Hone your knife before every use and sharpen it every 2–3 months.</p>
+        </div>
+
+        <div class="tip-card">
+          <div class="tip-tag">Eggs</div>
+          <div class="tip-icon">🥚</div>
+          <h4>Low & Slow for Perfect Scrambled Eggs</h4>
+          <p>Use the lowest heat setting and a rubber spatula. Pull the pan off the heat before they look fully done — residual heat finishes the job.</p>
+        </div>
+
+        <div class="tip-card">
+          <div class="tip-tag">Soup</div>
+          <div class="tip-icon">🍲</div>
+          <h4>Deglaze for the Best Pan Sauces</h4>
+          <p>After browning meat, add wine, broth, or even water and scrape up the brown bits. That fond is pure concentrated flavor you'd be throwing away.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ══════════ EBOOK CTA ══════════ -->
   <section class="ebook-section" id="ebook" aria-labelledby="ebook-title">
     <div class="container">
       <div class="ebook-inner">
+
+        <!-- Text side -->
         <div class="ebook-text">
-          <span class="eyebrow">📖 Best Seller</span>
-          <h2 id="ebook-title">The BinRecipes<br /><em>Ultimate Cookbook</em></h2>
-          <p>50 restaurant-quality recipes you can make at home — with full nutrition info, meal prep tips, shopping lists, and chef secrets you won't find on the blog.</p>
-          <ul class="ebook-features">
-            <li>50 exclusive, never-published recipes</li>
-            <li>Full nutrition breakdown for every dish</li>
-            <li>7-day meal prep guide with shopping list</li>
-            <li>30-minute weeknight dinner chapter</li>
-            <li>Instant PDF download — read on any device</li>
-            <li>Free lifetime updates included</li>
-          </ul>
-          <div class="ebook-pricing">
-            <div class="price-main">$12.99</div>
-            <div>
-              <div class="price-original">$24.99</div>
-              <div class="price-badge">48% OFF</div>
+          <span class="eyebrow">📖 #1 Best Seller — Over 12,000 Copies Sold</span>
+
+          <div class="ebook-stars">
+            <span class="stars">★★★★★</span>
+            <span>4.9/5 from 2,847 American home cooks</span>
+          </div>
+
+          <h2 id="ebook-title">The American<br /><em>Home Kitchen Bible</em></h2>
+
+          <p>Master the timeless techniques every American home cook should know — from perfectly seared cast-iron steaks to grandma's Sunday pot roast. No culinary school required.</p>
+
+          <!-- Chapter grid -->
+          <div class="ebook-chapters">
+            <div class="ebook-chapter">
+              <span class="ch-icon">🍳</span>
+              <div class="ch-text">Cast Iron Mastery<br /><span style="color:rgba(255,255,255,.5);font-weight:400">10 essential techniques</span></div>
+            </div>
+            <div class="ebook-chapter">
+              <span class="ch-icon">🥩</span>
+              <div class="ch-text">Perfect Roasts & Steaks<br /><span style="color:rgba(255,255,255,.5);font-weight:400">Low & slow secrets</span></div>
+            </div>
+            <div class="ebook-chapter">
+              <span class="ch-icon">🥧</span>
+              <div class="ch-text">Classic American Pies<br /><span style="color:rgba(255,255,255,.5);font-weight:400">Flaky crust every time</span></div>
+            </div>
+            <div class="ebook-chapter">
+              <span class="ch-icon">🍲</span>
+              <div class="ch-text">One-Pot Comfort Food<br /><span style="color:rgba(255,255,255,.5);font-weight:400">Family-sized recipes</span></div>
+            </div>
+            <div class="ebook-chapter">
+              <span class="ch-icon">🥗</span>
+              <div class="ch-text">Meal Prep Like a Pro<br /><span style="color:rgba(255,255,255,.5);font-weight:400">7-day grocery guide</span></div>
+            </div>
+            <div class="ebook-chapter">
+              <span class="ch-icon">🧁</span>
+              <div class="ch-text">Baking from Scratch<br /><span style="color:rgba(255,255,255,.5);font-weight:400">Breads, muffins & more</span></div>
             </div>
           </div>
+
+          <!-- Testimonials -->
+          <div class="ebook-testimonials">
+            <div class="ebook-testimonial">
+              <p>"Finally a cookbook that teaches the WHY behind every technique. My pot roast has never been better!"</p>
+              <span class="reviewer">⭐⭐⭐⭐⭐ — Sarah M., Texas</span>
+            </div>
+            <div class="ebook-testimonial">
+              <p>"The cast iron chapter alone is worth $50. I use this every single week."</p>
+              <span class="reviewer">⭐⭐⭐⭐⭐ — James T., Ohio</span>
+            </div>
+          </div>
+
+          <div class="ebook-pricing">
+            <div class="price-main">$9.99</div>
+            <div>
+              <div class="price-original">$29.99</div>
+              <div class="price-badge">67% OFF — Today Only</div>
+            </div>
+          </div>
+
           <div class="ebook-actions">
-            <a href="#" class="btn btn-primary" style="font-size:1rem;padding:16px 36px;">Get Instant Access →</a>
-            <a href="#" class="btn btn-white">Preview 10 Pages</a>
+            <a href="#" class="btn btn-primary" style="font-size:1rem;padding:16px 36px;">
+              Get Instant Access → $9.99
+            </a>
+            <a href="#" class="btn btn-white">Preview Free Chapter</a>
           </div>
-          <div class="ebook-guarantee">🔒 &nbsp;Secure checkout · 30-day money-back guarantee · Instant download</div>
+          <div class="ebook-guarantee">
+            🔒 &nbsp;Secure checkout &nbsp;·&nbsp; 30-day money-back guarantee &nbsp;·&nbsp; Instant PDF download
+          </div>
         </div>
+
+        <!-- Cover side -->
         <div class="ebook-mockup">
-          <div class="ebook-cover-wrap">
-            <img src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=600&q=80" alt="The BinRecipes Ultimate Cookbook cover" />
+          <div style="position:relative;">
+            <div class="ebook-cover-wrap">
+              <img src="https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?w=600&q=80" alt="The American Home Kitchen Bible cookbook cover" />
+            </div>
+            <div class="ebook-pages"></div>
+            <div class="cover-badge">
+              <span class="badge-price">$29.99</span>
+              <span class="badge-main">$9.99</span>
+              <span class="badge-sub">Today</span>
+            </div>
           </div>
-          <div class="ebook-pages"></div>
+          <!-- Social proof below cover -->
+          <div style="margin-top:24px;display:flex;flex-direction:column;gap:10px;">
+            <div style="background:rgba(255,255,255,.07);border-radius:12px;padding:14px 18px;display:flex;align-items:center;gap:12px;">
+              <span style="font-size:1.5rem;">👨‍👩‍👧‍👦</span>
+              <div>
+                <div style="color:#fff;font-weight:700;font-size:.9rem;">12,000+ families</div>
+                <div style="color:rgba(255,255,255,.5);font-size:.78rem;">cooking better meals every week</div>
+              </div>
+            </div>
+            <div style="background:rgba(255,255,255,.07);border-radius:12px;padding:14px 18px;display:flex;align-items:center;gap:12px;">
+              <span style="font-size:1.5rem;">📺</span>
+              <div>
+                <div style="color:#fff;font-weight:700;font-size:.9rem;">As seen in Food Network blogs</div>
+                <div style="color:rgba(255,255,255,.5);font-size:.78rem;">Trusted by home cooks across the US</div>
+              </div>
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -773,8 +976,8 @@
     <div class="container">
       <div class="newsletter-inner">
         <div style="font-size:2.5rem;margin-bottom:12px;">📬</div>
-        <h2 id="newsletter-title">Get Fresh Recipes in Your Inbox</h2>
-        <p>Join 50,000+ food lovers. No spam — just one new recipe every Tuesday.</p>
+        <h2 id="newsletter-title">Free Weekly Recipes for American Home Cooks</h2>
+        <p>Join 50,000+ readers across the US. One new recipe + one kitchen tip, every Tuesday. No spam, ever.</p>
         <form class="newsletter-form" onsubmit="handleNewsletter(event)" aria-label="Newsletter signup">
           <input type="email" placeholder="your@email.com" required aria-label="Email address" />
           <button type="submit" class="btn btn-primary">Subscribe</button>
@@ -806,9 +1009,9 @@
         <h5>Quick Links</h5>
         <ul>
           <li><a href="#featured">Featured Recipe</a></li>
+          <li><a href="#tips-title">Kitchen Tips</a></li>
           <li><a href="#ebook">Get the Cookbook</a></li>
           <li><a href="#newsletter">Newsletter</a></li>
-          <li><a href="#">About Us</a></li>
         </ul>
       </div>
       <div class="footer-col">
