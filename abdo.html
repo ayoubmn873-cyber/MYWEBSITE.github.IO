@@ -390,6 +390,48 @@
     /* ── HIDDEN ARTICLES FOR FILTERING ── */
     .category-block[data-cat] { transition: opacity .3s; }
     .category-block.hidden { display: none; }
+
+    /* ── SEARCH OVERLAY ── */
+    .search-overlay {
+      display: none; position: fixed; inset: 0; z-index: 1000;
+      background: rgba(30,30,46,.85); backdrop-filter: blur(6px);
+      padding: 80px 24px 24px;
+    }
+    .search-overlay.open { display: flex; flex-direction: column; align-items: center; }
+    .search-box {
+      width: 100%; max-width: 680px;
+      background: var(--white); border-radius: 16px;
+      box-shadow: 0 24px 80px rgba(0,0,0,.3);
+      overflow: hidden;
+    }
+    .search-input-wrap {
+      display: flex; align-items: center; gap: 12px; padding: 20px 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .search-input-wrap span { font-size: 1.2rem; }
+    .search-input-wrap input {
+      flex: 1; border: none; outline: none; font-size: 1.1rem;
+      font-family: var(--font); color: var(--dark); background: transparent;
+    }
+    .search-close-btn {
+      background: var(--light); border: none; border-radius: 8px;
+      padding: 6px 12px; font-size: .85rem; font-weight: 700;
+      color: var(--mid); cursor: pointer;
+    }
+    .search-results { max-height: 420px; overflow-y: auto; }
+    .search-result-item {
+      display: flex; align-items: center; gap: 16px;
+      padding: 14px 24px; border-bottom: 1px solid var(--border);
+      text-decoration: none; color: var(--dark); transition: background .15s;
+    }
+    .search-result-item:hover { background: var(--light); }
+    .search-result-item:last-child { border-bottom: none; }
+    .search-result-thumb {
+      width: 56px; height: 56px; border-radius: 10px; object-fit: cover; flex-shrink: 0;
+    }
+    .search-result-info h4 { font-size: .97rem; font-weight: 700; margin-bottom: 3px; }
+    .search-result-info p { font-size: .8rem; color: var(--mid); }
+    .search-no-results { padding: 40px 24px; text-align: center; color: var(--mid); font-size: .95rem; }
   </style>
 </head>
 <body>
@@ -853,6 +895,18 @@
   </div>
 </footer>
 
+<!-- ══════════ SEARCH OVERLAY ══════════ -->
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Search recipes">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <span>🔍</span>
+      <input type="text" id="searchInput" placeholder="Search recipes…" autocomplete="off" aria-label="Search recipes" />
+      <button class="search-close-btn" id="searchClose">ESC</button>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+
 <script>
   // ── Category filter tabs
   const tabs = document.querySelectorAll('.tab-btn');
@@ -871,6 +925,59 @@
       });
     });
   });
+
+  // ── Search
+  const RECIPES = [
+    { title: 'Avocado Toast with Poached Eggs', cat: 'Breakfast', time: '15 min', url: 'avocado-toast.html', img: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?w=120&q=70' },
+    { title: 'Fluffy Buttermilk Pancakes',       cat: 'Breakfast', time: '20 min', url: 'buttermilk-pancakes.html', img: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=120&q=70' },
+    { title: 'Authentic Pasta Carbonara',        cat: 'Dinner',    time: '25 min', url: 'pasta-carbonara.html', img: 'https://images.unsplash.com/photo-1612874742237-6526221588e3?w=120&q=70' },
+    { title: 'Baked Lemon Herb Salmon',          cat: 'Dinner',    time: '30 min', url: 'baked-salmon.html', img: 'https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=120&q=70' },
+    { title: 'Honey Garlic Chicken',             cat: 'Dinner',    time: '30 min', url: 'honey-garlic-chicken.html', img: 'https://images.unsplash.com/photo-1604908177453-7462950a6a3b?w=120&q=70' },
+    { title: 'No-Bake Cheesecake Jars',          cat: 'Dessert',   time: '20 min', url: 'no-bake-cheesecake.html', img: 'https://images.unsplash.com/photo-1488477181228-c2b89f848f28?w=120&q=70' },
+    { title: 'Double Chocolate Fudge Brownies',  cat: 'Dessert',   time: '35 min', url: 'fudgy-brownies.html', img: 'https://images.unsplash.com/photo-1515037893149-de7f840978e2?w=120&q=70' },
+    { title: 'Rainbow Buddha Bowl',              cat: 'Healthy',   time: '20 min', url: 'buddha-bowl.html', img: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=120&q=70' },
+    { title: 'Green Detox Smoothie Bowl',        cat: 'Healthy',   time: '10 min', url: 'green-smoothie-bowl.html', img: 'https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?w=120&q=70' },
+  ];
+
+  const overlay    = document.getElementById('searchOverlay');
+  const searchInput = document.getElementById('searchInput');
+  const resultsBox  = document.getElementById('searchResults');
+
+  function renderResults(query) {
+    const q = query.trim().toLowerCase();
+    const hits = q ? RECIPES.filter(r => r.title.toLowerCase().includes(q) || r.cat.toLowerCase().includes(q)) : RECIPES;
+    if (!hits.length) {
+      resultsBox.innerHTML = '<div class="search-no-results">No recipes found for "' + query + '"</div>';
+      return;
+    }
+    resultsBox.innerHTML = hits.map(r =>
+      `<a class="search-result-item" href="${r.url}">
+        <img class="search-result-thumb" src="${r.img}" alt="${r.title}" loading="lazy" />
+        <div class="search-result-info">
+          <h4>${r.title}</h4>
+          <p>${r.cat} &nbsp;·&nbsp; ${r.time}</p>
+        </div>
+      </a>`
+    ).join('');
+  }
+
+  function openSearch() {
+    overlay.classList.add('open');
+    renderResults('');
+    setTimeout(() => searchInput.focus(), 50);
+    document.body.style.overflow = 'hidden';
+  }
+  function closeSearch() {
+    overlay.classList.remove('open');
+    searchInput.value = '';
+    document.body.style.overflow = '';
+  }
+
+  document.querySelector('.search-btn').addEventListener('click', openSearch);
+  document.getElementById('searchClose').addEventListener('click', closeSearch);
+  overlay.addEventListener('click', e => { if (e.target === overlay) closeSearch(); });
+  searchInput.addEventListener('input', e => renderResults(e.target.value));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSearch(); });
 
   // ── Newsletter
   function handleNewsletter(e) {
