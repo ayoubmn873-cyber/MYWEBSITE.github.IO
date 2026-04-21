@@ -419,6 +419,102 @@
     }
     .footer-bottom a { color: var(--orange); }
 
+    /* ── GOLD EBOOK ── */
+    .gold-section {
+      padding: 80px 0;
+      background: linear-gradient(135deg, #0F1428 0%, #1a2040 50%, #0F1428 100%);
+      position: relative; overflow: hidden;
+    }
+    .gold-section::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 70% 50%, rgba(212,175,55,.12) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .gold-inner {
+      display: grid; grid-template-columns: 1fr 380px; gap: 60px; align-items: center;
+    }
+    @media(max-width:900px){ .gold-inner { grid-template-columns:1fr; } }
+    .gold-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(212,175,55,.15); border: 1px solid rgba(212,175,55,.35);
+      border-radius: 50px; padding: 6px 16px;
+      font-size: .75rem; font-weight: 800; letter-spacing: .8px;
+      text-transform: uppercase; color: #D4AF37; margin-bottom: 18px;
+    }
+    .gold-section h2 {
+      font-size: clamp(1.8rem,3.5vw,2.8rem); font-weight: 900;
+      color: #fff; line-height: 1.2; margin-bottom: 6px;
+    }
+    .gold-section h2 em { color: #D4AF37; font-style: normal; }
+    .gold-tagline {
+      font-size: 1rem; color: rgba(255,255,255,.65); margin-bottom: 28px; max-width: 480px;
+    }
+    .gold-features {
+      list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px;
+    }
+    .gold-features li {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: .92rem; color: rgba(255,255,255,.8); font-weight: 500;
+    }
+    .gold-features li::before {
+      content: '✦'; color: #D4AF37; font-size: .75rem; margin-top: 3px; flex-shrink: 0;
+    }
+    .gold-price-row {
+      display: flex; align-items: center; gap: 16px; margin-bottom: 28px;
+    }
+    .gold-price {
+      font-size: 2.8rem; font-weight: 900; color: #D4AF37; line-height: 1;
+    }
+    .gold-price-meta { display: flex; flex-direction: column; gap: 4px; }
+    .gold-price-meta .orig { font-size: .85rem; color: rgba(255,255,255,.4); text-decoration: line-through; }
+    .gold-price-meta .badge {
+      background: rgba(212,175,55,.2); color: #D4AF37;
+      font-size: .72rem; font-weight: 800; padding: 3px 10px;
+      border-radius: 50px; letter-spacing: .5px; text-transform: uppercase;
+    }
+    .btn-gold {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: linear-gradient(135deg, #D4AF37, #F5D060, #D4AF37);
+      color: #0F1428; font-weight: 900; font-size: 1rem;
+      padding: 16px 36px; border-radius: 50px; border: none;
+      cursor: pointer; transition: all .25s; text-decoration: none;
+      box-shadow: 0 6px 30px rgba(212,175,55,.35);
+    }
+    .btn-gold:hover { transform: translateY(-3px); box-shadow: 0 10px 40px rgba(212,175,55,.5); }
+    .gold-secure {
+      margin-top: 14px; font-size: .78rem; color: rgba(255,255,255,.4);
+      display: flex; align-items: center; gap: 8px;
+    }
+    .gold-card {
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(212,175,55,.25);
+      border-radius: 20px; padding: 32px 28px;
+      position: relative; overflow: hidden;
+    }
+    .gold-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, #D4AF37, #F5D060, #D4AF37);
+    }
+    .gold-card-title {
+      font-size: .7rem; font-weight: 800; letter-spacing: 1.5px;
+      text-transform: uppercase; color: #D4AF37; margin-bottom: 18px;
+    }
+    .gold-chapters { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
+    .gold-chapter {
+      display: flex; align-items: center; gap: 10px;
+      padding: 10px 12px;
+      background: rgba(255,255,255,.04); border-radius: 10px;
+      font-size: .85rem; color: rgba(255,255,255,.8); font-weight: 600;
+    }
+    .gold-chapter .gc-icon { font-size: 1.1rem; }
+    .gold-reviews { display: flex; flex-direction: column; gap: 10px; }
+    .gold-review {
+      background: rgba(212,175,55,.08); border-left: 3px solid #D4AF37;
+      border-radius: 0 10px 10px 0; padding: 10px 14px;
+    }
+    .gold-review p { font-size: .8rem; color: rgba(255,255,255,.7); font-style: italic; margin-bottom: 4px; }
+    .gold-review span { font-size: .72rem; color: #D4AF37; font-weight: 700; }
+
     /* ── KITCHEN TIPS ── */
     .tips-section { padding: 70px 0; background: var(--white); }
     .tips-grid {
@@ -511,6 +607,7 @@
           🔍 Search recipes…
         </button>
         <a href="/cookbook" class="btn btn-primary" style="padding:10px 20px;font-size:.85rem;">🎁 Free Cookbook</a>
+        <a href="#gold-ebook" style="padding:9px 18px;font-size:.82rem;font-weight:800;border-radius:50px;background:linear-gradient(135deg,#D4AF37,#F5D060);color:#0F1428;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:all .25s;">✦ Gold $9.99</a>
       </div>
     </nav>
   </div>
@@ -964,6 +1061,75 @@
                 <div style="color:rgba(255,255,255,.5);font-size:.78rem;">Trusted by home cooks across the US</div>
               </div>
             </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ GOLD EBOOK ══════════ -->
+  <section class="gold-section" id="gold-ebook">
+    <div class="container">
+      <div class="gold-inner">
+
+        <!-- Left: text -->
+        <div class="gold-text">
+          <span class="gold-eyebrow">✦ Premium Gold Edition — Limited Offer</span>
+          <h2>Grandma's Secrets<br /><em>of Delicious Food</em></h2>
+          <p class="gold-tagline">35 timeless family recipes passed down through generations — the real secrets behind the most delicious home-cooked meals.</p>
+
+          <ul class="gold-features">
+            <li>35 exclusive recipes never published online</li>
+            <li>50+ "Grandma's Wisdom" secret tips — the details no recipe tells you</li>
+            <li>8 chapters: Soups, Roasts, Pies, Breads, Slow Cooking, Sides, Desserts & Sauces</li>
+            <li>Step-by-step instructions with zero guesswork</li>
+            <li>7-Day Family Dinner Plan + printable grocery list</li>
+            <li>Instant PDF download — 33 beautifully designed pages</li>
+          </ul>
+
+          <div class="gold-price-row">
+            <div class="gold-price">$9.99</div>
+            <div class="gold-price-meta">
+              <span class="orig">$29.99</span>
+              <span class="badge">67% OFF — Today Only</span>
+            </div>
+          </div>
+
+          <a href="https://ayoubmn.gumroad.com/l/DeliciousFood" target="_blank" rel="noopener" class="btn-gold">
+            ✦ Get Instant Access — $9.99
+          </a>
+          <div class="gold-secure">
+            🔒 &nbsp;Secure checkout via Gumroad &nbsp;·&nbsp; Instant PDF download &nbsp;·&nbsp; 30-day money back guarantee
+          </div>
+        </div>
+
+        <!-- Right: card -->
+        <div class="gold-card">
+          <div class="gold-card-title">✦ What's Inside</div>
+          <div class="gold-chapters">
+            <div class="gold-chapter"><span class="gc-icon">🍲</span> Legendary Soups & Stews</div>
+            <div class="gold-chapter"><span class="gc-icon">🍗</span> Sunday Roasts & Chicken</div>
+            <div class="gold-chapter"><span class="gc-icon">🥧</span> Pies, Cobblers & Baked Goods</div>
+            <div class="gold-chapter"><span class="gc-icon">🍞</span> Homemade Breads & Biscuits</div>
+            <div class="gold-chapter"><span class="gc-icon">🥘</span> Slow-Cooked Comfort Food</div>
+            <div class="gold-chapter"><span class="gc-icon">🍰</span> Cakes, Cookies & Sweet Memories</div>
+            <div class="gold-chapter"><span class="gc-icon">🔐</span> Grandma's Secret Sauces</div>
+          </div>
+          <div class="gold-reviews">
+            <div class="gold-review">
+              <p>"Made Grandma's chicken soup when my daughter was sick. She said it was the best thing she had ever eaten. This cookbook is a treasure."</p>
+              <span>⭐⭐⭐⭐⭐ Jennifer C. — Portland, Oregon</span>
+            </div>
+            <div class="gold-review">
+              <p>"The chocolate chip cookie recipe is the best I have ever made. My coworkers think I am a professional baker now."</p>
+              <span>⭐⭐⭐⭐⭐ David K. — Atlanta, Georgia</span>
+            </div>
+          </div>
+          <div style="margin-top:20px;text-align:center;">
+            <a href="https://ayoubmn.gumroad.com/l/DeliciousFood" target="_blank" rel="noopener" class="btn-gold" style="width:100%;justify-content:center;font-size:.92rem;padding:14px 24px;">
+              Buy Now — $9.99 →
+            </a>
           </div>
         </div>
 
