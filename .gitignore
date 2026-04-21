@@ -1,3 +1,4 @@
 generate_images.py
+make_cookbook.py
 *.env
 .env
