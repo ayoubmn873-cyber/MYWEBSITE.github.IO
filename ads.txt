@@ -1,7 +1,7 @@
-# HBAgency , binrecipes 
+# HBAgency , binrecipes
 # info@hbagency.it
-managerdomain=hbagency.it 
-ownerdomain=binrecipes.com 
+managerdomain=hbagency.it
+ownerdomain=binrecipes.com
 google.com, pub-5849238611809526, RESELLER, f08c47fec0942fa0
 teads.tv, 17052, DIRECT, 15a9c44f6d26cbe1
 onetag.com, 3212c3d46a04676, DIRECT
@@ -25,7 +25,7 @@ openx.com, 537145117, RESELLER,6a698e2ec38604c6
 adform.com, 768, RESELLER
 contextweb.com, 560489, RESELLER, 89ff185a4c4e857c
 rekmob.com, 13161, RESELLER
-lijit.com, 268737, DIRECT, fafdf38b16bf6b2b 
+lijit.com, 268737, DIRECT, fafdf38b16bf6b2b
 lijit.com, 268737-eb, DIRECT, fafdf38b16bf6b2b
 video.unrulymedia.com, 2444764291, RESELLER
 contextweb.com, 558511, RESELLER, 89ff185a4c4e857c
@@ -701,7 +701,7 @@ rtbhouse.com, qbax0oJZ14CFN7BQIJcp, RESELLER
 rtbhouse.com, qYjwzKx0LtW8zyxLj0Qn, RESELLER
 richaudience.com, kBjBHJPcXM, RESELLER
 luponmedia.com, 19956462, DIRECT
-indexexchange.com, 188165, RESELLER, 50b1c356f2c5c8fc 
+indexexchange.com, 188165, RESELLER, 50b1c356f2c5c8fc
 indexexchange.com, 196757, RESELLER, 50b1c356f2c5c8fc
 adform.com, 1985, DIRECT, 9f5210a2f0999e32
 rubiconproject.com, 12398, RESELLER, 0bfd66d529a55807
