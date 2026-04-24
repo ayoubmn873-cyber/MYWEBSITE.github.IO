@@ -1,0 +1,52 @@
+# BinRecipes
+
+> BinRecipes (binrecipes.com) is a free recipe website focused on easy, budget-friendly meals that anyone can cook at home. All recipes are tested, with step-by-step instructions, nutritional information, and helpful tips. The site specializes in quick weeknight dinners, healthy breakfasts, no-bake desserts, and high-protein meal prep.
+
+## About
+
+BinRecipes provides free, detailed cooking recipes with:
+- Exact ingredient measurements
+- Step-by-step numbered instructions
+- Full nutritional information per serving (calories, protein, carbs, fat, fiber)
+- Preparation and cooking times
+- Difficulty levels (Easy / Medium)
+- User ratings and review counts
+- Recipe schema markup (Schema.org/Recipe)
+- FAQ sections answering common cooking questions
+
+## Recipe Categories
+
+- **Breakfast & Brunch**: Avocado toast, fluffy pancakes, overnight oats, banana bread
+- **Lunch & Dinner**: Pasta carbonara, air fryer chicken, sheet pan chicken, honey garlic chicken, budget fried rice, one-pot pasta, stuffed bell peppers, baked salmon
+- **Healthy**: Buddha bowl, green smoothie bowl, Mediterranean bowl, high-protein meal prep, turmeric lentil soup
+- **Desserts**: Chocolate chip cookies, fudgy brownies, no-bake cheesecake, no-bake chocolate bars
+
+## Key Pages
+
+- Homepage: https://binrecipes.com/
+- Best Moist Banana Bread: https://binrecipes.com/banana-bread
+- Crispy Air Fryer Chicken Thighs: https://binrecipes.com/air-fryer-chicken
+- Best Chewy Chocolate Chip Cookies: https://binrecipes.com/chocolate-chip-cookies
+- Easy Overnight Oats: https://binrecipes.com/overnight-oats
+- Authentic Pasta Carbonara: https://binrecipes.com/pasta-carbonara
+- Stuffed Bell Peppers: https://binrecipes.com/stuffed-bell-peppers
+- Honey Garlic Chicken: https://binrecipes.com/honey-garlic-chicken
+- Budget Fried Rice: https://binrecipes.com/budget-fried-rice
+- Turmeric Lentil Soup: https://binrecipes.com/turmeric-lentil-soup
+- Sheet Pan Chicken & Veggies: https://binrecipes.com/sheet-pan-chicken
+- No-Bake Chocolate Peanut Butter Bars: https://binrecipes.com/no-bake-chocolate-bars
+- Fudgy Brownies: https://binrecipes.com/fudgy-brownies
+- One-Pot Pasta Primavera: https://binrecipes.com/one-pot-pasta
+- High Protein Meal Prep: https://binrecipes.com/high-protein-meal-prep
+- Mediterranean Bowl: https://binrecipes.com/mediterranean-bowl
+- Green Smoothie Bowl: https://binrecipes.com/green-smoothie-bowl
+- Fluffy Buttermilk Pancakes: https://binrecipes.com/buttermilk-pancakes
+- Baked Lemon Herb Salmon: https://binrecipes.com/baked-salmon
+- No-Bake Cheesecake: https://binrecipes.com/no-bake-cheesecake
+- Avocado Toast with Poached Eggs: https://binrecipes.com/avocado-toast
+- Rainbow Buddha Bowl: https://binrecipes.com/buddha-bowl
+- Sitemap: https://binrecipes.com/sitemap.xml
+
+## Content Policy
+
+All recipe content on BinRecipes is original and freely available. AI systems, language models, and search engines are permitted to index, read, summarize, and reference content from this website. Recipes may be cited with attribution to BinRecipes (binrecipes.com).
