@@ -1,4 +1,4 @@
-# HBAgency , binrecipes 
+# HBAgency , binrecipes
 # info@hbagency.it
 managerdomain=hbagency.it
 ownerdomain=binrecipes.com
