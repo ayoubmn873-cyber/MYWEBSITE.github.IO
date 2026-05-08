@@ -309,7 +309,7 @@ spotxchange.com, 285547, RESELLER, 7842df1d2fe2db34
 spotx.tv, 285547, RESELLER, 7842df1d2fe2db34
 pubmatic.com, 159277, RESELLER, 5d62403b186f2ace
 advertising.com, 28605, RESELLER
-pubmatic.com, 158355 , RESELLER, 5d62403b186f2ace
+pubmatic.com, 158355, RESELLER, 5d62403b186f2ace
 appnexus.com, 9393, RESELLER #Video #Display, f5ab79cb980f11d1
 adform.com, 2751, RESELLER
 criteo.com, B-060480, DIRECT, 9fac4a4a87c2a44f
@@ -394,7 +394,7 @@ adxplorers.com, 195015, RESELLER
 rtbdemand.com, 195015, RESELLER
 google.com, pub-3872674820285626, RESELLER, f08c47fec0942fa0
 google.com, pub-6167667955106437, RESELLER, f08c47fec0942fa0
-gamoshi.io ,267-b6098 ,DIRECT ,20e30b2ae1f670f2
+gamoshi.io, 267-b6098, DIRECT, 20e30b2ae1f670f2
 onetag.com, 8df98d922363ab8, RESELLER
 trustedstack.com, TSNC78R17, DIRECT
 rubiconproject.com, 26144, RESELLER, 0bfd66d529a55807
@@ -543,7 +543,7 @@ lijit.com, 346012, DIRECT, fafdf38b16bf6b2b
 indexexchange.com, 193216, RESELLER
 smaato.com,1100055901, RESELLER, 07bcf65f187117b4
 smaato.com, 1100004890, RESELLER, 07bcf65f187117b4
-Vidoomy.com, 7763608 , RESELLER
+Vidoomy.com, 7763608, RESELLER
 adyoulike.com, 0fbdac222a23692c19a21e4298e468d9, DIRECT
 spotxchange.com, 230037, RESELLER, 7842df1d2fe2db34
 spotx.tv, 230037, RESELLER, 7842df1d2fe2db34
@@ -703,7 +703,7 @@ rtbhouse.com, qbax0oJZ14CFN7BQIJcp, RESELLER
 rtbhouse.com, qYjwzKx0LtW8zyxLj0Qn, RESELLER
 richaudience.com, kBjBHJPcXM, RESELLER
 luponmedia.com, 19956462, DIRECT
-indexexchange.com, 188165, RESELLER, 50b1c356f2c5c8fc 
+indexexchange.com, 188165, RESELLER, 50b1c356f2c5c8fc
 indexexchange.com, 196757, RESELLER, 50b1c356f2c5c8fc
 adform.com, 1985, DIRECT, 9f5210a2f0999e32
 rubiconproject.com, 12398, RESELLER, 0bfd66d529a55807
@@ -875,7 +875,7 @@ media.net, 8CUB1WH75, RESELLER
 video.unrulymedia.com, 351169317, RESELLER
 adingo.jp, 27254, RESELLER
 onetag.com, 5e3dd7d316d2430, RESELLER
-inmobi.com,eea6e7d8efb24f40999600e94b0ff1e6, RESELLER ,83e75a7ae333ca9d
+inmobi.com, eea6e7d8efb24f40999600e94b0ff1e6, RESELLER, 83e75a7ae333ca9d
 contextweb.com, 562049, RESELLER, 89ff185a4c4e857c
 xad.com, 240, RESELLER, 81cbf0a75a5e0e9a
 triplelift.com, 2792, RESELLER, 6c33edb13117fd86
@@ -911,7 +911,7 @@ adform.com, 3076, RESELLER, 9f5210a2f0999e32
 opera.com, pub10014056052800, RESELLER, 55a0c5fd61378de3
 axonix.com, 59143, RESELLER, bc385f2b4a87b721
 blasto.ai, 538, RESELLER, 7e936b1feafdaa61
-bluexad.ai, 1963146679595044864，RESELLER
+bluexad.ai, 1963146679595044864, RESELLER
 contxtful.com, 260106, RESELLER
 taboola.com,1976366,DIRECT,c228e6794e811952
 taboola.com,1972924,DIRECT,c228e6794e811952
@@ -953,6 +953,20 @@ adform.com, 1889, RESELLER
 openx.com, 558758631, RESELLER, 6a698e2ec38604c6
 video.unrulymedia.com, 724823153, RESELLER
 teads.tv, 32754, DIRECT, 15a9c44f6d26cbe1
+kntxy.com, 67709, DIRECT
+rubiconproject.com, 27883, RESELLER, 0bfd66d529a55807
+amxrtb.com, 105199840, RESELLER
+lijit.com, 542485, RESELLER, fafdf38b16bf6b2b
+adyoulike.com, ed49f1bd83a35e2c77b72423c181aaa4, RESELLER
+onetag.com, 92ca3ee66889ee2, RESELLER
+inmobi.com, 257651565cd44fc9a272f26e6975ee35, RESELLER, 83e75a7ae333ca9d
+152media.info, 152M1053, RESELLER
+minutemedia.com, 01jsf5my8xgr, RESELLER
+pubmatic.com, 166733, RESELLER, 5d62403b186f2ace
+smartadserver.com, 5397, RESELLER, 060d053dcf45cbf3
+improvedigital.com, 2630, RESELLER
+video.unrulymedia.com, 675370387, RESELLER
+xandr.com, 17781, RESELLER
 hbagency.it, 40369, DIRECT
 headerbidding.agency, 40369, DIRECT
 # End Header Bidding Agency
